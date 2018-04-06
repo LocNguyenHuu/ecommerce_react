@@ -5,6 +5,10 @@ router.get('/user', (req, res) => {
   res.send('new user')
 })
 
+router.post('/login', (req, res) => {
+  console.log(req.body)
+})
+
 router.post('/newUser', (req, res) => {
   console.log(req.body)
 })

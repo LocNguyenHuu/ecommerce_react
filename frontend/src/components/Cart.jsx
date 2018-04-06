@@ -4,7 +4,9 @@ import { withRouter } from 'react-router-dom'
 class Cart extends Component {
   render() {
     return (
-      <div className="content">CART</div>
+      <div className="content">
+        <h1>CART</h1>
+      </div>
     )
   }
 }

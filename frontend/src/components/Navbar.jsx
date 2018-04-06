@@ -6,31 +6,33 @@ const Header = Layout
 // const SubMenu = Menu.SubMenu
 // const MenuItemGroup = Menu.ItemGroup
 
+// STYLED COMPONENTS
+const Title = styled.h1`
+  font-size: 3em;
+  font-family: 'Economica', sans-serif;
+  text-align: center;
+  color: palevioletred;
+`
+const Nav = styled(Header)`
+  position: fixed;
+  width: 100%;
+`
+
 export default class Navbar extends Component {
   state = {
     current: 'home',
   }
   
-  handleClick = (e) => {
-    console.log('click ', e)
+  // HANDLERS
+  handleClick = (ev) => {
     this.setState({
-      current: e.key,
+      current: ev.key
     })
   }
   
-  render() {
-    const Title = styled.h1`
-      font-size: 3em;
-      font-family: 'Economica', sans-serif;
-      text-align: center;
-      color: palevioletred;
-    `
-    const Heading = styled(Header)`
-      position: fixed;
-      width: 100%;
-    `
+  render() { 
     return (
-      <Heading>
+      <Nav>
         <Title>MY STORE</Title>
         <Menu 
           mode="horizontal"
@@ -55,7 +57,7 @@ export default class Navbar extends Component {
             </Link>
           </Menu.Item>
         </Menu>
-      </Heading>
+      </Nav>
     )
   }
 }

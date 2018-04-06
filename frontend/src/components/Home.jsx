@@ -1,12 +1,55 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
+import { Form, Icon, Input, Button } from 'antd'
+import axios from 'axios'
+
+const FormItem = Form.Item
 
 class Home extends Component {
+
+  userLogin = () => {
+    axios.post('http://localhost:6060/login', {
+      value: 'test'
+    })
+    .then(function (response) {
+      console.log(response)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+  } 
+
   render() {
+    const { getFieldDecorator } = this.props.form
     return (
-      <div className="content">HOME</div>
+      <div className="content">
+        <Form>
+          {/* LOG IN FORM */}
+          <FormItem>
+            {getFieldDecorator('userName', {
+              rules: [{ required: true, message: 'Please input your username!' }],
+            })(
+              <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+            )}
+          </FormItem>
+          <FormItem>
+            {getFieldDecorator('password', {
+              rules: [{ required: true, message: 'Please input your Password!' }],
+            })(
+              <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+            )}
+          </FormItem>
+          {/* BUTTONS */}
+          <Button onClick={this.userLogin} icon="heart-o" size='large' ghost>LOG IN</Button>
+          <Link to='/profile'>
+          <Button icon="user-add" size='large' ghost>SIGN UP</Button>
+          </Link>
+        </Form>
+      </div>
     )
   }
 }
 
-export default withRouter(Home)
+const LogInForm = Form.create()(Home)
+
+export default withRouter(LogInForm)
