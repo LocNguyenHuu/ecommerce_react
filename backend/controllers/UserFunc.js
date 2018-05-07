@@ -1,5 +1,5 @@
-const UserFunc = {
-  
+const userFunc = {
+
 }
 
-module.exports = UserFunc
+module.exports = userFunc

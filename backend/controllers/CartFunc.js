@@ -1,5 +1,5 @@
-const CartFunc = {
-  
+const cartFunc = {
+
 }
 
-module.exports = CartFunc
+module.exports = cartFunc
