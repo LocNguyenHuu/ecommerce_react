@@ -6,6 +6,7 @@ const express = require('express')
 // ROUTES
 const Cart = require('./routes/cart')
 const User = require('./routes/user')
+const Shop = require('./routes/Shop')
 
 // BODY PARSER
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use('/', Cart, User)
+app.use('/', Cart, User, Shop)
 
 
 app.listen(6060, () => {
