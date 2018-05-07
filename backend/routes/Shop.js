@@ -2,7 +2,7 @@ const express = require('express')
 router = express.Router()
 
 router.get('/inventory', (req, res) => {
-  res.send('this is my cart')
+  res.send('this is my store')
 })
 
 router.post('/addToStore', (req, res) => {

@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Store from './components/Store'
 import Cart from './components/Cart'
 import User from './components/User'
+import SignIn from './components/SignIn'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -36,8 +37,11 @@ class App extends Component {
             <Route path="/cart" render={() => {
               return <Cart />
             }} />
-            <Route path="/profile" render={() => {
+            <Route path="/create" render={() => {
               return <User />
+            }} />
+            <Route path="/signin" render={() => {
+              return <SignIn />
             }} />
           </Switch>
         </Body>

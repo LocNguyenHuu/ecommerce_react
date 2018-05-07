@@ -56,6 +56,12 @@ export default class Navbar extends Component {
             CART
             </Link>
           </Menu.Item>
+          <Menu.Item key="signIn">
+          <Link to="/signin">
+            <Icon type="heart-o" />
+            SIGN IN
+            </Link>
+          </Menu.Item>
         </Menu>
       </Nav>
     )

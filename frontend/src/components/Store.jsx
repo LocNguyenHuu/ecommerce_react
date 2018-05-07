@@ -5,7 +5,9 @@ class Store extends Component {
   render() {
     return (
       <div className="content">
-        STORE
+        <h1>
+          STORE
+        </h1>
       </div>
     )
   }
