@@ -1,5 +1,7 @@
 # Full Stack E-Commerce 
 
+**Project is currently put on hold. Focusing on other skills/projects**
+
 Building a E-commerce platform that allows users to create profiles and shop for specific styles. User's profile page will show personal information and previous purchases in their profile. Looking to add a payment system through Stripe to process payments when user is ready to check out their cart.
 
 ## Technology Stack
